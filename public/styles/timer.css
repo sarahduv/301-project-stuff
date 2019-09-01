@@ -1,0 +1,10 @@
+.timer_container {
+  display: inline-block;
+
+}
+
+.timer_container .timer_blade {
+  width: 200px;
+  height: 50px;
+  background-color: blue;
+}
