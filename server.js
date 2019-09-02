@@ -23,3 +23,8 @@ app.listen(PORT, () => console.log('Listening on port:', PORT));
 app.get('/', (request, response) => {
   response.render('./index');
 });
+
+// This redirects after the time ends
+app.get('/timer_zero', (request, response) => {
+  response.render('./timer_zero')
+})
