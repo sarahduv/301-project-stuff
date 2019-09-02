@@ -1,11 +1,30 @@
+
+
 .simon_container {
+  position: relative;
   width: 55em;
 }
+
+.simon_center {
+  position: absolute;
+  z-index: 1;
+  left: 18.5em;
+  top: 18.5em;
+  height: 15em;
+  width: 15em;
+  background-color: white;
+  border-radius: 100%;
+  border: 1em solid #505050;
+}
+
 .simon_button {
   display: inline-block;
   height: 25em;
   width: 25em;
   transition: all 0.2s;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  border: 1em solid #505050;
 }
 
 .simon_button_lit {
@@ -15,23 +34,31 @@
 #simon_top_left {
   background-color: #0b680b;
   background-image: url('/img/luke.png');
+  background-position-x: 65%;
+  background-position-y: 65%;
   border-top-left-radius: 9999999em;
 }
 
 #simon_top_right {
   background-color: #a41313;
   background-image: url('/img/trooper.png');
+  background-position-x: 35%;
+  background-position-y: 65%;
   border-top-right-radius: 9999999em;
 }
 
 #simon_bottom_left {
   background-color: #bcbc36;
   background-image: url('/img/vader.png');
+  background-position-x: 65%;
+  background-position-y: 35%;
   border-bottom-left-radius: 9999999em;
 }
 
 #simon_bottom_right {
   background-color: #184f9e;
   background-image: url('/img/leia.png');
+  background-position-x: 35%;
+  background-position-y: 35%;
   border-bottom-right-radius: 9999999em;
 }
