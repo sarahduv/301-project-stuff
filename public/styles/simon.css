@@ -1,0 +1,37 @@
+.simon_container {
+  width: 55em;
+}
+.simon_button {
+  display: inline-block;
+  height: 25em;
+  width: 25em;
+  transition: all 0.2s;
+}
+
+.simon_button_lit {
+  filter: brightness(135%) saturate(135%);
+}
+
+#simon_top_left {
+  background-color: #0b680b;
+  background-image: url('/img/luke.png');
+  border-top-left-radius: 9999999em;
+}
+
+#simon_top_right {
+  background-color: #a41313;
+  background-image: url('/img/trooper.png');
+  border-top-right-radius: 9999999em;
+}
+
+#simon_bottom_left {
+  background-color: #bcbc36;
+  background-image: url('/img/vader.png');
+  border-bottom-left-radius: 9999999em;
+}
+
+#simon_bottom_right {
+  background-color: #184f9e;
+  background-image: url('/img/leia.png');
+  border-bottom-right-radius: 9999999em;
+}
