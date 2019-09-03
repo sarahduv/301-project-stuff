@@ -1,6 +1,7 @@
 'use strict';
 
 function SimonGame (highlightMs, delayMs){
+  this.isRunning = false;
   this.challengeArr = [];
   this.playerClicksArr = [];
   this.highlightMs = highlightMs;
@@ -15,7 +16,9 @@ function SimonGame (highlightMs, delayMs){
 }
 
 SimonGame.prototype.start = function (){
+  this.isRunning = true;
   this.points = 0;
+  this.updatePoints();
   this.challengeArr = [];
   this.nextRound();
 }
@@ -52,12 +55,21 @@ SimonGame.prototype.verifyOrder = function (){
 
 SimonGame.prototype.lose = function (){
   alert('you lost');
+  // this will need to be where we store the points into sql
+  this.isRunning = false;
+}
+
+SimonGame.prototype.updatePoints = function (){
+  $('#simon_points').text(this.points.toString().padStart(4, '0'));
 }
 
 function SimonButton (buttonEl, game){
   this.buttonEl = buttonEl;
   this.game = game;
   buttonEl.on('click', (e) => {
+    if(!this.game.isRunning){
+      return;
+    }
     this.highlight(() => {
       this.game.playerClicksArr.push(this);
       if(!this.game.verifyOrder()){
@@ -65,6 +77,7 @@ function SimonButton (buttonEl, game){
       } else if(this.game.playerClicksArr.length === this.game.challengeArr.length) {
         setTimeout(() => {
           this.game.points += this.game.challengeArr.length;
+          this.game.updatePoints();
           this.game.nextRound();
         }, this.game.delayMs*2);
       }
@@ -82,3 +95,5 @@ SimonButton.prototype.highlight = function (onHightlightDone){
 }
 
 var simon = new SimonGame(500, 250);
+
+$('#simon_start_button').on('click', () => {simon.start()});

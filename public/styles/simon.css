@@ -1,20 +1,28 @@
+body {
+  background-color: rgb(29, 29, 29);
+}
 
-
+/* This contains the simon game container */
 .simon_container {
   position: relative;
   width: 55em;
 }
 
+/* This is the middle that contains the start button, points, and title */
 .simon_center {
-  position: absolute;
-  z-index: 1;
-  left: 18.5em;
-  top: 18.5em;
-  height: 15em;
-  width: 15em;
-  background-color: white;
-  border-radius: 100%;
+  align-items: center;
+  background-color: rgb(221, 221, 221);
   border: 1em solid #505050;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 15em;
+  /* justify-content: center; */
+  left: 18.5em;
+  position: absolute;
+  top: 18.5em;
+  width: 15em;
+  z-index: 1;
 }
 
 .simon_button {
@@ -30,6 +38,8 @@
 .simon_button_lit {
   filter: brightness(135%) saturate(135%);
 }
+
+/* These are the colored sections */
 
 #simon_top_left {
   background-color: #0b680b;
@@ -61,4 +71,34 @@
   background-position-x: 35%;
   background-position-y: 35%;
   border-bottom-right-radius: 9999999em;
+}
+
+/* These are for the center of the game */
+
+
+#simon_start_button {
+  background-color: #aa9c9c;
+  border-radius: 2.5em;
+  color: rgb(29, 29, 29);
+  cursor: pointer;
+  font-family: monospace;
+  background-image: url(/img/play.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 0.3em;
+  width: 7em;
+  height: 7em;
+  transition: 1s;
+  background-position-x: 0.3em;
+}
+
+#simon_start_button:hover {
+  background-color: #868686;
+}
+
+#simon_points {
+  color: rgb(131, 1, 1);
+  font-family: 'digital';
+  font-size: 4em;
+  margin-top: 0.5em;
 }
