@@ -19,6 +19,7 @@
   "dependencies": {
     "ejs": "^2.6.2",
     "express": "^4.17.1",
-    "nodemon": "^1.19.1"
+    "nodemon": "^1.19.1",
+    "sharer.js": "^0.3.8"
   }
 }

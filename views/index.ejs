@@ -2,6 +2,7 @@
 <html>
   <head>
       <link href="/fonts/digital.fontdesc" rel="stylesheet">
+      <link rel="stylesheet" type="text/css" href="./styles/modules.css" />
 
       <script src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -9,12 +10,20 @@
 
   <body>
     <!-- < include ./timer.ejs > -->
-    <!-- we don't want the timer right now, we are testing simon -->
+    <!-- put this back when you want the timer-->
     <!-- Move the two lines from the timer.js file to wherever we input the above line -->
 
-    <%- include ./simon.ejs %>
+    <!-- < include ./simon.ejs %> -->
+    <!-- put this back when you want simon-->
+
+    <%- include ./four_in_a_row.ejs %>
+
+    <!-- < include ./share.ejs > -->
+
     
   </body>
+  <script src="path/to/sharer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js"></script>
 </html>
 
 

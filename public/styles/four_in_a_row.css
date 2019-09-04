@@ -1,0 +1,53 @@
+
+.centerx{
+  text-align: center;
+}
+
+#four_in_a_row_container{
+  display: inline-block;
+}
+
+#four_in_a_row_container .gridCell {
+  background-color:gray;
+  height: 10em;
+  width: 10em;
+  border-radius: 1.5em;
+  transition: all, 0.2s;
+}
+
+#four_in_a_row_container .gridCell:hover {
+  background-color: dimgray;
+  cursor: pointer;
+}
+
+#four_in_a_row_container .cellPlayer_0 {
+  background-image: url('/img/trooper.png');
+  background-size: 100% 100%;
+}
+
+#four_in_a_row_container .cellPlayer_1 {
+  background-image: url('/img/vader.png');
+  background-size: 100% 100%
+}
+
+#four_in_a_row_start {
+  background-color: #aa9c9c;
+  border-radius: 2.5em;
+  color: rgb(29, 29, 29);
+  cursor: pointer;
+  background-image: url(/img/play.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  padding: 0.3em;
+  width: 7em;
+  height: 7em;
+  transition: 1s;
+  background-position-x: 0.3em;
+  margin: 0 auto;
+  margin-top: 2em;
+  align-items: center;
+}
+#four_in_a_row_start:hover {
+  background-color: #868686;
+}
