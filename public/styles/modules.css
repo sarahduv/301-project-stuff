@@ -1,0 +1,21 @@
+.share_button_container{
+  display: block;
+  margin: 0px auto;
+  width: 17em;
+}
+
+.share_button{
+  border-radius: 2em;
+  color: white;
+  height: 3em;
+  width: 20em;
+}
+
+#share_facebook {
+  background-color: rgb(77, 110, 219);
+  transition: 1s;
+}
+
+#share_facebook:hover {
+  background-color: rgb(93, 128, 245);
+}
